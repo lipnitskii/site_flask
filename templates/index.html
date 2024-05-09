@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 
 
-{% block content %}
-<img src="{{ url_for('static', filename='img/under.png') }}" alt="">
-{% endblock content %}
+{% block main_page %}
+
+<div class="wrapper">
+    <div class="empty_block"></div>
+
+    <div class="cascade_block">
+
+        <div class="cascade_menu">
+            <p class="info_name">Mike do IT - fullstack разработка</p>
+
+            <div class="cascade_block_li">
+                <ul>
+                    <li class="checkmark"><a href="#">Html</a></li>
+                    <li class="checkmark"><a href="#">Css</a></li>
+                    <li class="checkmark"><a href="#">Python</a></li>
+                    <li class="checkmark"><a href="#">Java Script</a></li>
+                    <li class="checkmark"><a href="#">Flask</a></li>
+                    <li class="checkmark"><a href="#">Django</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock main_page %}
