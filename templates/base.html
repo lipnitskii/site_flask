@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    {% block title %} {% if title %}
+    <title>OSSlab - {{ title }}</title>
+    {% else %}
+    <title>OSSlab welcome</title>
+    {% endif %} {% endblock title %}
+  </head>
+
+  <body>
+    <div class="wrapper">
+      {% block menu %}
+      <header class="header">
+        <ul class="main_menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Регистрация</a></li>
+            <li><a href="#">Логин</a></li>
+            <li><a href="#">Аккаунт</a></li>
+            <li><a href="#">Создать</a></li>
+            <li><a href="#">Выход</a></li>
+        </ul>
+      </header>
+      {% endblock menu %}
+
+      {% block main_page %}
+      {% endblock main_page %}
+
+      {% block content %} {% endblock content %}
+      
+      {% block footer %}
+      <footer class="footer">
+      OSSlab - all rights reserved
+    </footer>
+      {% endblock footer %}      
+    </div>
+  </body>
+</html>
