@@ -1,10 +1,7 @@
-from flask import Flask, render_template, url_for
+from blog import create_app, create_user
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
+app = create_app()
 
 if __name__ == "__main__":
+    create_user()
     app.run(debug=True)
